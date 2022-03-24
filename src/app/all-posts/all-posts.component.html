@@ -1,0 +1,5 @@
+<p>all-posts works!</p>
+<div *ngFor="let todo of tdsrv.todos; index as i">
+  <a [routerLink]="'/post/' + todo._id"><h1>{{todo.description}}</h1></a>
+  <h2>{{todo.complete}}</h2>
+</div>
