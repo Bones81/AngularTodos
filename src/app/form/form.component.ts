@@ -47,6 +47,12 @@ export class FormComponent implements OnInit {
         description: this.description,
         complete: this.complete,
       })
+    } else {
+      //create the todo with the form data
+      this.tdsrv.createTodo({
+        description: this.description,
+        complete: this.complete,
+      })
     }
     // send back to the main page
     this.router.navigate(["/"])

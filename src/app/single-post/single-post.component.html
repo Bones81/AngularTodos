@@ -5,4 +5,6 @@
   <a routerLink="/"><button>Go Back</button></a>
 
   <a [routerLink]="'/edit/' + post._id"><button>Edit Todo</button></a>
+
+  <button (click)="deleteTodo()">Delete Todo</button>
 </div>

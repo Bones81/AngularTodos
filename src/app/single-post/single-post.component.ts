@@ -16,11 +16,13 @@ export class SinglePostComponent implements OnInit {
     description: "",
     complete: false,
   } // variable to hold the selected post
+  router: Router // variable to hold router service
 
-  constructor(route: ActivatedRoute, todoService: TodoService) {
+  constructor(route: ActivatedRoute, todoService: TodoService, router: Router) {
     // assign services to properties
     this.route = route
     this.tdsrv = todoService
+    this.router = router //variable for todo service
    }
 
   ngOnInit(): void {
@@ -35,6 +37,12 @@ export class SinglePostComponent implements OnInit {
         this.post = post
       }
     })
+  }
+
+  // function to delete a todo
+  async deleteTodo() {
+    await this.tdsrv.deleteTodo(this.post)
+    this.router.navigate(["/"])
   }
 
 }

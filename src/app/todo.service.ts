@@ -6,7 +6,7 @@ import { Todo } from '../types'
 })
 export class TodoService {
   // url of API
-  url = 'http://localhost:3000/todos'
+  url = 'http://localhost:3000/todos/'
   // property to hold array of todos from api
   todos: Array<Todo> = [];
 
