@@ -15,7 +15,7 @@ export class FormComponent implements OnInit {
   route: ActivatedRoute; // variable for route service
   id: number | null | undefined = null; // variable for edited post if editing
   buttonLabel = "Create todo";
-  router = Router; // variable for router service
+  router: Router; // variable for router service
 
   constructor(todoService: TodoService, route: ActivatedRoute, router: Router) {
     this.tdsrv = todoService;
